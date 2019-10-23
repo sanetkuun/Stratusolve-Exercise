@@ -23,7 +23,7 @@ $('#myModal').on('show.bs.modal', function (event) {
 
 $('#saveTask').click(function() {
     //Assignment: Implement this functionality
-    alert('Save... Id:'+currentTaskId);
+    //alert('Save... Id:'+currentTaskId);
     $('#myModal').modal('hide');
     var taskName = $('#InputTaskName').val();
     var taskDescription = $('#InputTaskDescription').val();
@@ -35,7 +35,7 @@ $('#saveTask').click(function() {
 
 $('#deleteTask').click(function() {
     //Assignment: Implement this functionality
-    alert('Delete... Id:'+currentTaskId);
+    //alert('Delete... Id:'+currentTaskId);
     $('#myModal').modal('hide');
     var taskName = $('#InputTaskName').val();
     var taskDescription = $('#InputTaskDescription').val();
@@ -47,7 +47,7 @@ $('#deleteTask').click(function() {
 function deleteTaskFromIcon(id) {
     //Assignment: Implement this functionality
     currentTaskId = id;
-    alert('Delete... Id:'+currentTaskId);
+    //alert('Delete... Id:'+currentTaskId);
     $('#myModal').modal('hide');
     var taskName = $('#InputTaskName').val();
     var taskDescription = $('#InputTaskDescription').val();
