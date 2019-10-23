@@ -1,0 +1,21 @@
+#TaskList .list-group-item .task-info a,
+#TaskList .list-group-item .task-info a
+{
+	color:#000;
+}
+
+#TaskList .list-group-item .task-info a:hover
+{
+	text-decoration: none;
+	color:#337ab7;
+}
+
+#TaskList .list-group-item .task-info
+{
+	display:inline-block;
+}
+
+#TaskList .list-group-item .task-buttons
+{
+	display:inline-block;
+}

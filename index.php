@@ -14,6 +14,7 @@
 <head>
     <title>Basic Task Manager</title>
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
 </head>
 <body>
 
@@ -70,39 +71,5 @@
 </body>
 <script type="text/javascript" src="assets/js/jquery-1.12.3.min.js"></script>
 <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-    var currentTaskId = -1;
-    $('#myModal').on('show.bs.modal', function (event) {
-        var triggerElement = $(event.relatedTarget); // Element that triggered the modal
-        var modal = $(this);
-        if (triggerElement.attr("id") == 'newTask') {
-            modal.find('.modal-title').text('New Task');
-            $('#deleteTask').hide();
-            currentTaskId = -1;
-        } else {
-            modal.find('.modal-title').text('Task details');
-            $('#deleteTask').show();
-            currentTaskId = triggerElement.attr("id");
-            console.log('Task ID: '+triggerElement.attr("id"));
-        }
-    });
-    $('#saveTask').click(function() {
-        //Assignment: Implement this functionality
-        alert('Save... Id:'+currentTaskId);
-        $('#myModal').modal('hide');
-        updateTaskList();
-    });
-    $('#deleteTask').click(function() {
-        //Assignment: Implement this functionality
-        alert('Delete... Id:'+currentTaskId);
-        $('#myModal').modal('hide');
-        updateTaskList();
-    });
-    function updateTaskList() {
-        $.post("list_tasks.php", function( data ) {
-            $( "#TaskList" ).html( data );
-        });
-    }
-    updateTaskList();
-</script>
+<script type="text/javascript" src="assets/js/processData.js"></script>
 </html>
